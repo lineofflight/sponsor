@@ -5,7 +5,7 @@
 require "zeitwerk"
 
 loader = Zeitwerk::Loader.for_gem
-loader.inflector.inflect("api" => "API")
+loader.inflector.inflect("api" => "API", "lwa" => "LWA")
 loader.collapse("#{__dir__}/sponsor/apis")
 loader.ignore("#{__dir__}/generator")
 loader.setup
