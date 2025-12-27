@@ -1,0 +1,19 @@
+# frozen_string_literal: true
+
+# rbs_inline: enabled
+
+module Sponsor
+  # <%= spec.dig("info", "title") %>
+  #
+  # @see <%= spec.dig("info", "contact", "url") %>
+  class <%= class_name %> < API
+<% operations.each_with_index do |op, idx| -%>
+    # <%= op[:summary] %>
+    #: (<%= op[:signature] %>) -> HTTP::Response
+    def <%= op[:method_name] %>(<%= op[:params] %>)
+      <%= op[:http_method] %>("<%= op[:path] %>"<%= op[:args] %>)
+    end
+<%= idx < operations.size - 1 ? "\n" : "" -%>
+<% end -%>
+  end
+end

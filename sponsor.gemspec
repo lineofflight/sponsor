@@ -18,13 +18,8 @@ Gem::Specification.new do |spec|
   spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/main/CHANGELOG.md"
   spec.metadata["rubygems_mfa_required"] = "true"
 
-  gemspec = File.basename(__FILE__)
-  spec.files = IO.popen(["git", "ls-files", "-z"], chdir: __dir__, err: IO::NULL) do |ls|
-    ls.readlines("\x0", chomp: true).reject do |f|
-      (f == gemspec) ||
-        f.start_with?("bin/", "Gemfile", ".gitignore", "test/", ".github/", ".rubocop.yml")
-    end
-  end
+  spec.files = Dir["lib/sponsor/**/*.rb", "sig/sponsor/**/*.rbs"]
+    .append("lib/sponsor.rb", "sig/sponsor.rbs", "LICENSE.txt", "README.md")
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]

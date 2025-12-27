@@ -27,4 +27,13 @@ namespace :specs do
   end
 end
 
+desc "Generate API classes from OpenAPI specs"
+task :generate do
+  require_relative "lib/generator/specs"
+  require_relative "lib/generator/api"
+  Generator::Specs::SPECS.each_key do |name|
+    Generator::API.new(name.to_s).save
+  end
+end
+
 task default: [:test, :rubocop]
