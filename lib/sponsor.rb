@@ -1,8 +1,13 @@
 # frozen_string_literal: true
 
-require_relative "sponsor/version"
+# rbs_inline: enabled
 
+require "zeitwerk"
+
+loader = Zeitwerk::Loader.for_gem
+loader.inflector.inflect("api" => "API")
+loader.setup
+
+# Amazon Ads API client for Ruby
 module Sponsor
-  class Error < StandardError; end
-  # Your code goes here...
 end

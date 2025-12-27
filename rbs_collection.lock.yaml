@@ -1,0 +1,68 @@
+---
+path: ".gem_rbs_collection"
+gems:
+- name: addressable
+  version: '2.8'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: d6e4d19ad6117272766c58412953cc5ec561a294
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: delegate
+  version: '0'
+  source:
+    type: stdlib
+- name: ffi
+  version: 1.17.2
+  source:
+    type: rubygems
+- name: fileutils
+  version: '0'
+  source:
+    type: stdlib
+- name: forwardable
+  version: '0'
+  source:
+    type: stdlib
+- name: http
+  version: '5.1'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: d6e4d19ad6117272766c58412953cc5ec561a294
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: io-console
+  version: '0'
+  source:
+    type: stdlib
+- name: minitest
+  version: '5.25'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: d6e4d19ad6117272766c58412953cc5ec561a294
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: pp
+  version: '0'
+  source:
+    type: stdlib
+- name: prettyprint
+  version: '0'
+  source:
+    type: stdlib
+- name: rake
+  version: '13.0'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: d6e4d19ad6117272766c58412953cc5ec561a294
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: rdoc
+  version: '0'
+  source:
+    type: stdlib
+gemfile_lock_path: Gemfile.lock

@@ -13,3 +13,6 @@ gem "minitest", "~> 5.16"
 gem "rubocop-minitest", require: false
 gem "rubocop-rake", require: false
 gem "rubocop-shopify", require: false
+
+gem "rbs-inline", require: false
+gem "steep", require: false
