@@ -1,0 +1,61 @@
+# Generated from lib/amazon_ads/api.rb with RBS::Inline
+
+module AmazonAds
+  # Base class for Amazon Ads API clients.
+  # Handles authentication, response parsing, error mapping, and retry logic.
+  class API
+    ENDPOINTS: untyped
+
+    MAX_RETRIES: Integer
+
+    BASE_RETRY_DELAY: Integer
+
+    attr_reader region: Symbol
+
+    attr_reader profile_id: String?
+
+    # : (region: Symbol, ?access_token: String?, ?lwa: LWA?, ?profile_id: String?) -> void
+    def initialize: (region: Symbol, ?access_token: String?, ?lwa: LWA?, ?profile_id: String?) -> void
+
+    private
+
+    # Returns the current access token, refreshing via LWA if needed.
+    # : () -> String
+    def access_token: () -> String
+
+    # : () -> HTTP::Client
+    def http: () -> HTTP::Client
+
+    # : () -> Hash[String, String]
+    def default_headers: () -> Hash[String, String]
+
+    # : () -> String
+    def client_id: () -> String
+
+    # : () -> String
+    def endpoint: () -> String
+
+    # Handles HTTP response, raising appropriate errors or parsing success responses.
+    # : (HTTP::Response) -> untyped
+    def handle_response: (HTTP::Response) -> untyped
+
+    # Executes request with retry logic for rate limiting.
+    # : () { () -> HTTP::Response } -> untyped
+    def with_retry: () { () -> HTTP::Response } -> untyped
+
+    # : (String, ?params: Hash[String, untyped]) -> untyped
+    def get: (String, ?params: Hash[String, untyped]) -> untyped
+
+    # : (String, ?body: Hash[String, untyped]) -> untyped
+    def post: (String, ?body: Hash[String, untyped]) -> untyped
+
+    # : (String, ?body: Hash[String, untyped]) -> untyped
+    def put: (String, ?body: Hash[String, untyped]) -> untyped
+
+    # : (String, ?body: Hash[String, untyped]) -> untyped
+    def patch: (String, ?body: Hash[String, untyped]) -> untyped
+
+    # : (String) -> untyped
+    def delete: (String) -> untyped
+  end
+end

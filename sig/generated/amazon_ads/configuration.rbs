@@ -1,0 +1,24 @@
+# Generated from lib/amazon_ads/configuration.rb with RBS::Inline
+
+module AmazonAds
+  # Configuration for the AmazonAds library.
+  # Centralizes settings for authentication and API access.
+  class Configuration
+    attr_accessor client_id: String?
+
+    attr_accessor client_secret: String?
+
+    attr_accessor refresh_token: String?
+
+    attr_accessor region: Symbol
+
+    attr_accessor profile_id: String?
+
+    # : () -> void
+    def initialize: () -> void
+
+    # Builds an LWA instance from the configuration.
+    # : () -> LWA
+    def lwa: () -> LWA
+  end
+end

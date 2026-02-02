@@ -1,0 +1,28 @@
+# Generated from lib/amazon_ads/client.rb with RBS::Inline
+
+module AmazonAds
+  # High-level client for Amazon Ads API.
+  # Provides convenient access to all API endpoints with automatic authentication.
+  class Client
+    attr_reader lwa: LWA
+
+    attr_reader region: Symbol
+
+    attr_reader profile_id: String?
+
+    # : (?region: Symbol, ?profile_id: String?, ?lwa: LWA?) -> void
+    def initialize: (?region: Symbol, ?profile_id: String?, ?lwa: LWA?) -> void
+
+    # Access Profiles API
+    # : () -> Profiles
+    def profiles: () -> Profiles
+
+    # Access Sponsored Products API
+    # : () -> SponsoredProducts
+    def sponsored_products: () -> SponsoredProducts
+
+    # Creates a new client with a different profile ID
+    # : (String) -> Client
+    def with_profile: (String) -> Client
+  end
+end

@@ -1,0 +1,39 @@
+# Generated from lib/amazon_ads/lwa.rb with RBS::Inline
+
+module AmazonAds
+  # Requests Login with Amazon (LWA) access tokens for the Amazon Ads API.
+  # Handles token caching and automatic refresh when tokens expire.
+  #
+  # @see https://advertising.amazon.com/API/docs/en-us/info/api-overview
+  class LWA
+    URL: String
+
+    TOKEN_EXPIRY_BUFFER: Integer
+
+    attr_reader client_id: String
+
+    attr_reader client_secret: String
+
+    attr_reader refresh_token: String
+
+    # : (?client_id: String, ?client_secret: String, ?refresh_token: String) -> void
+    def initialize: (?client_id: String, ?client_secret: String, ?refresh_token: String) -> void
+
+    # Returns a valid access token, refreshing if necessary.
+    # : () -> String
+    def access_token: () -> String
+
+    # Forces a token refresh regardless of expiry.
+    # : () -> String
+    def refresh!: () -> String
+
+    # Returns true if the token is expired or not yet fetched.
+    # : () -> bool
+    def token_expired?: () -> bool
+
+    private
+
+    # : () -> Hash[String, String]
+    def params: () -> Hash[String, String]
+  end
+end

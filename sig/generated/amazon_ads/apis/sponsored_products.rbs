@@ -1,0 +1,52 @@
+# Generated from lib/amazon_ads/apis/sponsored_products.rb with RBS::Inline
+
+module AmazonAds
+  # Amazon Ads API - Sponsored Products
+  #
+  # @see https://advertising.amazon.com/API/docs/en-us/sponsored-products
+  class SponsoredProducts < API
+    # Gets a bid recommendation for an ad group. [PLANNED DEPRECATION 3/27/2024]
+    # : (Numeric) -> untyped
+    def get_ad_group_bid_recommendations: (Numeric) -> untyped
+
+    # Gets a bid recommendation for a keyword. [PLANNED DEPRECATION 3/27/2024]
+    # : (Numeric) -> untyped
+    def get_keyword_bid_recommendations: (Numeric) -> untyped
+
+    # Gets bid recommendations for keywords. [PLANNED DEPRECATION 3/27/2024]
+    # : (?body: Hash[String, untyped]) -> untyped
+    def create_keyword_bid_recommendations: (?body: Hash[String, untyped]) -> untyped
+
+    # Gets suggested keywords for the specified ad group.
+    # : (Numeric, ?max_num_suggestions: Integer?, ?ad_state_filter: String?) -> untyped
+    def get_ad_group_suggested_keywords: (Numeric, ?max_num_suggestions: Integer?, ?ad_state_filter: String?) -> untyped
+
+    # Gets suggested keywords with extended data for the specified ad group.
+    # : (Numeric, ?max_num_suggestions: Integer?, ?suggest_bids: String?, ?ad_state_filter: String?) -> untyped
+    def get_ad_group_suggested_keywords_ex: (Numeric, ?max_num_suggestions: Integer?, ?suggest_bids: String?, ?ad_state_filter: String?) -> untyped
+
+    # Gets suggested keywords for the specified ASIN.
+    # : (String, ?max_num_suggestions: Integer?) -> untyped
+    def get_asin_suggested_keywords: (String, ?max_num_suggestions: Integer?) -> untyped
+
+    # Gets suggested keyword for a specified list of ASINs.
+    # : (?body: Hash[String, untyped]) -> untyped
+    def bulk_get_asin_suggested_keywords: (?body: Hash[String, untyped]) -> untyped
+
+    # Gets a list of bid recommendations for keyword, product, or auto targeting expressions.
+    # : (?body: Hash[String, untyped]) -> untyped
+    def get_bid_recommendations: (?body: Hash[String, untyped]) -> untyped
+
+    # Request a snapshot
+    # : (String, ?body: Hash[String, untyped]) -> untyped
+    def request_snapshot: (String, ?body: Hash[String, untyped]) -> untyped
+
+    # Get the status of a requested snapshot
+    # : (Numeric) -> untyped
+    def get_snapshot_status: (Numeric) -> untyped
+
+    # Download requested snapshot
+    # : (Numeric) -> untyped
+    def download_snapshot: (Numeric) -> untyped
+  end
+end

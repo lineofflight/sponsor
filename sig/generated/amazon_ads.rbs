@@ -1,0 +1,16 @@
+# Generated from lib/amazon_ads.rb with RBS::Inline
+
+# Amazon Ads API client for Ruby
+module AmazonAds
+  # Returns the global configuration object.
+  # : () -> Configuration
+  def self.configuration: () -> Configuration
+
+  # Configures the AmazonAds library.
+  # : () { (Configuration) -> void } -> void
+  def self.configure: () { (Configuration) -> void } -> void
+
+  # Resets the configuration to defaults.
+  # : () -> void
+  def self.reset_configuration!: () -> void
+end

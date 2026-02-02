@@ -1,0 +1,20 @@
+# Generated from lib/amazon_ads/apis/profiles.rb with RBS::Inline
+
+module AmazonAds
+  # Amazon Ads API - Profiles
+  #
+  # @see https://advertising.amazon.com/API/docs/en-us/reference/profiles
+  class Profiles < API
+    # Gets a list of profiles.
+    # : (?api_program: String?, ?access_level: String?, ?profile_type_filter: String?, ?valid_payment_method_filter: String?) -> untyped
+    def list_profiles: (?api_program: String?, ?access_level: String?, ?profile_type_filter: String?, ?valid_payment_method_filter: String?) -> untyped
+
+    # Update the daily budget for one or more profiles.
+    # : (?body: Hash[String, untyped]) -> untyped
+    def update_profiles: (?body: Hash[String, untyped]) -> untyped
+
+    # Gets a profile specified by identifier.
+    # : (Integer) -> untyped
+    def get_profile_by_id: (Integer) -> untyped
+  end
+end

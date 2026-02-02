@@ -23,7 +23,7 @@ module Generator
     end
 
     def save
-      output_dir = File.expand_path("../../lib/sponsor/apis", __dir__)
+      output_dir = File.expand_path("../../lib/amazon_ads/apis", __dir__)
       FileUtils.mkdir_p(output_dir)
 
       path = File.join(output_dir, "#{spec_name}.rb")
