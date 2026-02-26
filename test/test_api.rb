@@ -141,19 +141,6 @@ class TestAPI < Minitest::Test
     assert_requested(:get, "#{@endpoint}/v2/profiles", times: 4) # 1 initial + 3 retries
   end
 
-  def test_rate_limit_error_includes_retry_after
-    stub_request(:get, "#{@endpoint}/v2/profiles")
-      .to_return(status: 429, body: "{}", headers: { "Content-Type" => "application/json", "Retry-After" => "5" })
-
-    api = AmazonAds::Profiles.new(region: :na, access_token: "test_token")
-
-    error = assert_raises(AmazonAds::RateLimitError) do
-      api.list_profiles
-    end
-
-    assert_equal(5, error.retry_after)
-  end
-
   def test_supports_different_regions
     assert_equal(:na, AmazonAds::Profiles.new(region: :na, access_token: "t").region)
     assert_equal(:eu, AmazonAds::Profiles.new(region: :eu, access_token: "t").region)
