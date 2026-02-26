@@ -6,10 +6,10 @@ source "https://rubygems.org"
 gemspec(name: "amazon-ads")
 
 gem "irb"
-gem "rake", "~> 13.0"
+gem "rake"
 
-gem "minitest", "~> 5.16"
-gem "webmock", "~> 3.0"
+gem "minitest"
+gem "webmock"
 
 gem "rubocop-minitest", require: false
 gem "rubocop-rake", require: false
