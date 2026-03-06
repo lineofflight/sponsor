@@ -42,13 +42,13 @@ Make requests:
 
 ```ruby
 # List advertising profiles
-profiles = AmazonAds::Profiles.new(region: :na, access_token: access_token)
+profiles = AmazonAds::Profiles.new(region: "NA", access_token:)
 profiles.list_profiles
 
 # List campaigns under a profile
 campaigns = AmazonAds::Campaigns.new(
-  region: :na,
-  access_token: access_token,
+  region: "NA",
+  access_token:,
   profile_id: "123456789",
 )
 campaigns.list_campaigns
@@ -56,17 +56,4 @@ campaigns.list_campaigns
 
 ## Development
 
-```bash
-bin/setup        # Install dependencies
-rake test        # Run tests
-rake rubocop     # Lint
-rake steep       # Type check
-```
-
-## Contributing
-
-Bug reports and pull requests are welcome on [GitHub](https://github.com/lineofflight/amazon-ads-ruby).
-
-## License
-
-MIT
+See [AGENTS.md](AGENTS.md).
